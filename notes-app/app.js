@@ -1,11 +1,8 @@
-const validator = require("validator");
+const chalk = require("chalk");
 const getNotes = require("./notes.js");
 
 const notes = getNotes();
 
 console.log(notes);
 
-console.log(validator.isEmail("amine@mail.com"));
-
-console.log(validator.isURL("igvault.onrender.com"));
-console.log(validator.isURL("igvault.onrender"));
+console.log(chalk.green.bgGreen.bold("Success!"));
