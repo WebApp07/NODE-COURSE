@@ -10,8 +10,22 @@ yargs.version("1.1.0");
 yargs.command({
   command: "add",
   describe: "Adding a note",
+  builder: {
+    title: {
+      describe: "Note title",
+      demandOption: true,
+      type: "string",
+    },
+
+    body: {
+      describe: "Note body",
+      demandOption: true,
+      type: String,
+    },
+  },
   handler: function () {
-    console.log("Note Add!");
+    console.log("Title: " + argv.title);
+    console.log("Body" + argv.body);
   },
 });
 
